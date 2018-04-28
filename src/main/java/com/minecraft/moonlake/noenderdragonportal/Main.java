@@ -8,13 +8,12 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-
 
 package com.minecraft.moonlake.noenderdragonportal;
 
@@ -31,19 +30,24 @@ public class Main extends JavaPlugin implements Listener {
     public Main() {
     }
 
+
     @Override
     public void onEnable() {
         this.getServer().getPluginManager().registerEvents(this, this);
-        this.getLogger().info("没有末影龙传送门 NoEnderDragonPortal 插件 v" + getDescription().getVersion() + " 成功加载.");
+        this.getLogger().info("NoEnderDragonPortal plugin v" + getDescription()
+            .getVersion() + " fully loaded.");
     }
+
 
     @Override
     public void onDisable() {
     }
 
+
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPortal(EntityCreatePortalEvent event) {
-        if(event.getEntity() instanceof EnderDragon && event.getPortalType() == PortalType.ENDER)
+        if (event.getEntity() instanceof EnderDragon && event
+            .getPortalType() == PortalType.ENDER)
             event.setCancelled(true);
     }
 }

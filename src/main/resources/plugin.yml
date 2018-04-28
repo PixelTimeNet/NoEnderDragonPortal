@@ -20,4 +20,5 @@ name: NoEnderDragonPortal
 main: com.minecraft.moonlake.noenderdragonportal.Main
 version: ${project.version}
 author: Month_Light
-website: http://www.mcyszh.com
+authors: [Feier, lgou2w]
+website: https://github.com/PixelTimeCN

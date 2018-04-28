@@ -1,0 +1,18 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+
+# ignore intellij idea setting folder
+/lib/
+/.metadata/
+/doc/
+/META-INF/
+*.iml
+.project
+.classpath
+/bin/
+*.DS_Store
+/target/
+/.settings/
